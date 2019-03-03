@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/userListView"
+        style="@android:style/Widget.DeviceDefault.ListView"
+        android:layout_width="370dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:choiceMode="multipleChoice"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="5dp"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/amountText"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageButton
+        android:id="@+id/removeButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/amountText"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <EditText
+        android:id="@+id/amountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+    <TextView
+        android:id="@+id/activeUserTextView"
+        android:layout_width="316dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Wybierz użytkownika"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refreshButton" />
+
+    <ImageButton
+        android:id="@+id/refreshButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/userListView"
+        app:layout_constraintTop_toBottomOf="@+id/userListView"
+        app:srcCompat="@android:drawable/stat_notify_sync_noanim"
+        tools:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/descriptionText"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Opis tranzakcji"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activeUserTextView" />
+
+</android.support.constraint.ConstraintLayout>
